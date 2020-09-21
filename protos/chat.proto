@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/sharmarajdaksh/grpc-second-attempt/protos";
+
+message Message {
+  string body = 1;
+}
+
+service ChatService {
+  rpc SayHello(Message) returns (Message);
+}
